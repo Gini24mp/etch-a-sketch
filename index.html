@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Poor Story|Exo 2">
+    <link rel="icon" href="./images/logo.svg" type="image/png">
+    <title>Etch A Sketch</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header-container">
+            <img src="./images/logo.svg" alt="logo" class="logo">
+            <h1>Etch A Sketch</h1>
+        </div>
+
+        <div class="content-container">
+            <div class="controls-container">
+
+                <form id="color-selection">
+                    <p class="selection-question">Choose the color of the brush :</p>
+                    
+                    <label for="brush-color" class="selection-label">Color:</label>
+                    <input type="color" id="brush-color" name="brush-color" value="#000000"><br>
+                    
+                    <label for="random" class="selection-label">Random:</label>
+                    <input type="radio" id="random" name="random" value="random"><br><br>
+
+                    <input type="submit" value="Submit" class="button-55">
+                    <input type="reset" value="Reset" class="button-55">
+                
+                </form>
+                
+                
+                <form id="size-selection">
+                    <p class="selection-question">Choose the size:</p>
+                    
+                    <input type="radio" id="16" name="pad-size" value="16" checked>
+                    <label for="16" class="selection-label">16X16</label><br>
+
+                    <input type="radio" id="32" name="pad-size" value="32">
+                    <label for="32" class="selection-label">32X32</label><br>
+
+                    <input type="radio" id="64" name="pad-size" value="64">
+                    <label for="64" class="selection-label">64X64</label><br><br>
+    
+                    <input type="submit" value="Submit" class="button-55">
+                    <input type="reset" value="Reset" class="button-55">
+                
+                </form>
+
+                <div class="btn-container">
+                    <button id="clear-pad" class="button-55">Clear Pad</button>
+                </div>
+
+            </div>
+
+            <div class="sketch-container" id="drawing-pad">
+                <!-- <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+
+                <div class="row">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div> -->
+
+            </div>
+
+        </div>
+
+    </div>
+    
+
+    
+</body>
+<script src="./js/index.js"></script>
+</html>
