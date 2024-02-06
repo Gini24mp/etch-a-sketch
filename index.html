@@ -18,7 +18,7 @@
         <div class="content-container">
             <div class="controls-container">
 
-                <form id="color-selection">
+                <form id="color-selection" onsubmit="return changeColor()">
                     <p class="selection-question">Choose the color of the brush :</p>
                     
                     <label for="brush-color" class="selection-label">Color:</label>
@@ -33,7 +33,7 @@
                 </form>
                 
                 
-                <form id="size-selection">
+                <form id="size-selection" onsubmit="return changeSize()">
                     <p class="selection-question">Choose the size:</p>
                     
                     <input type="radio" id="16" name="pad-size" value="16" checked>
@@ -51,40 +51,13 @@
                 </form>
 
                 <div class="btn-container">
-                    <button id="clear-pad" class="button-55">Clear Pad</button>
+                    <button id="clear-pad" class="button-55" onclick="clearCanvas()">Clear Pad</button>
                 </div>
 
             </div>
 
             <div class="sketch-container" id="drawing-pad">
-                <!-- <div class="row">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-
-                <div class="row">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-
-                <div class="row">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div>
-
-                <div class="row">
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                    <div class="cell"></div>
-                </div> -->
-
+                
             </div>
 
         </div>

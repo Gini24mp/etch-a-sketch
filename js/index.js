@@ -1,4 +1,7 @@
-console.log('Hello, eugene')
+var currentSettings = {
+    brushColor: "black",
+    canvasSize: 16,
+}
 
 function createCanvas(numRows,numCols,paintcolor) {
     const element = document.getElementById("drawing-pad");
@@ -12,7 +15,7 @@ function createCanvas(numRows,numCols,paintcolor) {
             cell.style.width = `${100 / numCols}%`;
 
             cell.addEventListener("mouseover", () => {
-                paintCell(cell,paintcolor);
+                paintCell(cell,currentSettings.brushColor);
             });
 
             row.appendChild(cell);
@@ -32,4 +35,38 @@ function clearCanvas() {
     });
 }
 
-createCanvas(16,16,"rgb(245, 222, 179)");
+
+function changeSize(){
+    event.preventDefault();
+
+    var newSize = document.querySelector('input[name="pad-size"]:checked');
+
+    currentSettings.canvasSize = parseInt(newSize.value,10);
+
+    const cellContainer = document.getElementById('drawing-pad');
+
+    cellContainer.innerHTML="";
+
+    createCanvas(currentSettings.canvasSize,currentSettings.canvasSize,currentSettings.brushColor);    
+
+    return true;
+
+}
+
+function changeColor(){
+    event.preventDefault();
+
+    var random = document.querySelector('input[name="random"]:checked');
+
+    if(random!==null){
+        var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+        currentSettings.brushColor = randomColor;
+    }else{
+        var newColor = document.querySelector('input[name="brush-color"]');
+        currentSettings.brushColor = newColor.value;
+    }
+
+
+}
+
+createCanvas(currentSettings.canvasSize,currentSettings.canvasSize,currentSettings.brushColor)
